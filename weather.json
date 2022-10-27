@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 4.3488,
+        "lat": 50.8504
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 291.91,
+        "feels_like": 291.83,
+        "temp_min": 290.51,
+        "temp_max": 293.04,
+        "pressure": 1015,
+        "humidity": 76
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.69,
+        "deg": 220
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1666780785,
+    "sys": {
+        "type": 1,
+        "id": 1227,
+        "country": "BE",
+        "sunrise": 1666765418,
+        "sunset": 1666801757
+    },
+    "timezone": 7200,
+    "id": 2800866,
+    "name": "Brussels",
+    "cod": 200
+}
