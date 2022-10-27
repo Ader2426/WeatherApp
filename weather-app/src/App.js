@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import cloud from "./assets/cloud.png";
 import sun from "./assets/Sun.png";
+import {AiOutlineSearch} from "react-icons/ai"
 import { motion } from "framer-motion";
 
 function App() {
@@ -12,13 +13,13 @@ function App() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=d9aab12b9a69f724ab080a06a5b86ed7&units=metric`;
 
   const searchLocation = (event) => {
-    if (event.key === "Enter") {
+    
       axios.get(url).then((response) => {
         setData(response.data);
         console.log(response.data);
       });
       setLocation("");
-    }
+    
   };
 
   return (
@@ -28,10 +29,11 @@ function App() {
           value={location}
           onChange={(event) => setLocation(event.target.value)}
           placeholder="Enter location"
-          onKeyPress={searchLocation}
+          
           type="text"
         />
-
+        <button className="btn" onClick={searchLocation}><AiOutlineSearch /></button>
+  
       </div>
 
       {data.name !== undefined && (
@@ -44,7 +46,7 @@ function App() {
               {data.main ? <h2>{data.main.temp.toFixed()}℃</h2> : null}
             </div>
             <div className="description">
-              <p>{data.weather ? <p>{data.weather[0].main}</p> : null}</p>
+              {data.weather ? <p>{data.weather[0].main}</p> : null}
             </div>
           </div>
           <div className="icon">
